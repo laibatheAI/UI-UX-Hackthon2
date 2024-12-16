@@ -1,72 +1,70 @@
 import Image from "next/image"; 
-export default function Hero(){
-  return(
-    <div className="bg-[#F2F0FF] lg:w-[1920px] lg:h-[764px] top-[122px]">
-      <div className=" absolute lg:w-[387px] lg:h-[387px] top-[130px] left-[70px]">
-        <Image src="/image 32.png"
-        alt="Lamp Light"
-        width={387}
-        height={387}/>
+
+export default function Hero() {
+  return (
+    <div className="bg-[#F2F0FF] w-full lg:w-[1920px] h-auto lg:h-[764px] lg:pt-[122px]">
+      {/* Left Image */}
+      <div className="relative w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] lg:w-[387px] lg:h-[387px] mx-auto lg:mx-0 lg:absolute lg:top-[130px] lg:left-[70px]">
+        <Image
+          src="/image 32.png"
+          alt="Lamp Light"
+          layout="responsive"
+          width={387}
+          height={387}
+        />
       </div>
 
-      <div className="bg-[#FB2E86] absolute lg:w-[15px] lg:h-[15px] top-[625px] left-[184px] rounded-full"></div>
+      {/* Pink Circle */}
+      <div className="bg-[#FB2E86] w-[10px] h-[10px] sm:w-[15px] sm:h-[15px] rounded-full mx-auto lg:absolute lg:top-[625px] lg:left-[184px]"></div>
 
-      {/* text Div */}
-
-      <div className=" absolute lg:w-[644px] lg:h-[248px] top-[325px] left-[375px]">
-        {/* pink Text */}
-        <div className="lg:w-[230px] lg:h-[28px] top-[325px] left-[378px]">
-          <p className="font-lato text-[#FB2E86] text-[16px] font-bold leading-[28px] text-left underline-offset-auto decoration-clone">
+      {/* Text Section */}
+      <div className="text-center lg:text-left lg:absolute lg:w-[644px] lg:h-auto top-[325px] lg:top-[325px] lg:left-[375px] mx-auto px-4 lg:px-0">
+        {/* Pink Text */}
+        <div className="text-[#FB2E86] font-lato text-[14px] sm:text-[16px] font-bold leading-[20px] sm:leading-[28px] mb-2">
           Best Furniture For Your Castle....
-          </p>
         </div>
 
-        {/* black Text */}
-        <div className="lg:w-[644px] lg:h-[140px] top-[365px] left-[375px]">
-          <p className="font-josefin-sans text-[53px] leading-[81.98px] tracking-[0.015em] text-left underline-offset-auto decoration-clone">
-          New Furniture Collection
-          Trends in 2020
-          </p>
+        {/* Black Heading */}
+        <div className="font-josefin-sans text-[28px] sm:text-[40px] lg:text-[53px] leading-[36px] sm:leading-[50px] lg:leading-[81.98px] tracking-[0.015em] mb-4">
+          New Furniture Collection <br /> Trends in 2020
         </div>
 
-        {/* lorems text */}
-        <div className="lg:w-[559px] lg:h-[56px] grid top-[517px] left-[375px] mt-5">
-          <p className="font-lato text-[#8A8FB9] text-[16px] font-bold leading-[28px] text-left underline-offset-auto decoration-clone">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
-          in phasellus non in justo.
-          </p>
+        {/* Description Text */}
+        <div className="text-[#8A8FB9] font-lato text-[14px] sm:text-[16px] font-normal leading-[22px] sm:leading-[28px] mb-6 lg:mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.
         </div>
 
-        {/* btnDiv */}
-        <div className="grid justify-center items-center bg-[#FB2E86] lg:w-[163px] lg:h-[50px] top-[600px] left-[375px] rounded-sm mt-10">
-          <button className="font-josefin-sans text-white text-[17px] leading-[19.92px] tracking-[0.02em] text-left underline-offset-auto decoration-clone">
-          Shop Now
+        {/* Button */}
+        <div className="flex justify-center lg:justify-start">
+          <button className="bg-[#FB2E86] text-white font-josefin-sans text-[14px] sm:text-[17px] py-2 px-6 lg:px-10 rounded-sm">
+            Shop Now
           </button>
         </div>
       </div>
 
-      {/* Img-Div */}
-      <div className=" absolute lg:w-[706px] lg:h-[689px] top-[161px] left-[1041px]">
-        <Image src="/sofa promotional header.png"
-        alt="Sofa Image"
-        width={706}
-        height={689}/>
+      {/* Right Image */}
+      <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] lg:w-[706px] lg:h-[689px] mx-auto mt-6 lg:mt-0 lg:absolute lg:top-[161px] lg:left-[1041px]">
+        <Image
+          src="/sofa promotional header.png"
+          alt="Sofa Image"
+          layout="responsive"
+          width={706}
+          height={689}
+        />
       </div>
 
-      <div className=" absolute lg:w-[66.07px] lg:h-[14.6px] top-[818.46px] left-[927px]">
-        <Image src="/promotional page nav.png"
-        alt="page NAvigation"
-        width={66.07}
-        height={14.6}/>
+      {/* Bottom Navigation */}
+      <div className="flex justify-center lg:absolute lg:top-[818.46px] lg:left-[927px] mt-6 lg:mt-0">
+        <Image
+          src="/promotional page nav.png"
+          alt="Page Navigation"
+          width={66.07}
+          height={14.6}
+        />
       </div>
     </div>
   );
 }
-
-
-
-
-
 
 
 
