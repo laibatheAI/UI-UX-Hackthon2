@@ -1,35 +1,68 @@
+"use client"
+
+import {usePathname} from "next/navigation"; 
 import Image from "next/image";
 
 export default function Footer() {
-  return (
+
+  //Get the current pages path name
+  const pathname = usePathname();
+
+  //Determine the `top` value based on the cuurent page 
+  const footerSet= pathname === "/"
+  ?"lg:top-[7500px]"
+
+  :pathname === "/about"
+  ?"lg:top-[2434px]"
+  
+  :pathname === "/login"
+  ?"lg:top-[1316px]"
+
+  :pathname === "/cart"
+  ?"lg:top-[1394px]"
+
+  :pathname === "/products"
+  ?"top-[2751px]"
+
+  :pathname === "/blog"
+  ?"top-[3063px]"
+
+  :pathname === "/shop"
+  ?"lg:top-[2233px]"
+
+  :pathname === "/contact"
+  ?"top-[1807px]"
+
+  :pathname === ""
+  return ( 
     <>
-      <div className="lg:w-[1920px] lg:h-[532px] top-[7500px] left-[-1px]">
-        <div className="lg:w-[1920px] lg:h-[479px] bg-[#EEEFFB] flex pl-48 pr-[200px]">
+      <div className={`absolute lg:w-[1920px] lg:h-[532px] ${footerSet} left-[-1px]`}>
+        <div className="lg:w-[1920px] lg:h-[479px] bg-[#EEEFFB] grid lg:grid-cols-5">
           {/* 1st */}
-          <div className="lg:w-[450px] lg:h-[479px] grid justify-between ">
-            <div className="lg:w-[110px] lg:h-[38px] top-[95px] left-[310px] lg:py-20">
+          <div className="lg:w-[450px] lg:h-[479px] grid justify-between lg:ml-80 lg:py-0 lg:px-0 px-5 w-[320px] h-[250px]">
+            <div className="lg:w-[110px] lg:h-[38px] top-[95px] left-[310px] lg:py-20 py-10">
               <p className="font-josefin-sans font-extrabold text-[38px] leading-[44.53px] text-left">
                 Hekto
               </p>
 
               <div className="bg-white lg:w-[377px] lg:h-[44px] top-[164px] left-[309px] flex justify-between mt-5">
-                <p className="font-lato text-[#8A8FB9] text-[16px] font-normal leading-[19.2px] text-left py-3">
+                <p className="font-lato text-[#8A8FB9] lg:text-[16px] text-[12px] pl-3 font-normal leading-[19.2px] text-left py-3">
                   Enter Email Address
                 </p>
 
-                <div className="lg:w-[135px] lg:h-[44px] top-[167px] left-[549px] rounded-md bg-[#FB2E86] grid justify-center items-center">
-                  <p className="font-roboto text-white text-[16px] font-medium leading-[18.75px] text-left ">
+                <div className="lg:w-[135px] lg:h-[44px] top-[167px] left-[549px]  rounded-md bg-[#FB2E86] grid justify-center items-center">
+                  <button className="font-roboto text-white lg:text-[16px] lg:px-0 text-[12px] px-3 font-medium leading-[18.75px] text-left ">
                     Sign Up
-                  </p>
+                  </button>
                 </div>
               </div>
 
-              <div className="font-lato text-[#8A8FB9] text-[16px] font-normal leading-[19.2px] text-left mt-4 ">
+              <div className="font-lato text-[#8A8FB9] lg:text-[16px] text-[14px] font-normal leading-[19.2px] text-left mt-4 ">
                 Contact Info
               </div>
 
               <div className="lg:w-[401px] lg:h-[19px] top-[262px] left-[308px] mt-3 ">
-                <p className="font-lato text-[#8A8FB9] text-[15px] font-normal leading-[19.2px] text-left">
+                <p className="font-lato text-[#8A8FB9] lg:text-[15px] text-[11px] font-normal leading-[19.2px] text-left">
                   17 Princess Road, London, Greater London NW1 8JR, UK
                 </p>
               </div>
@@ -38,7 +71,7 @@ export default function Footer() {
 
 
           {/* 2nd */}
-          <div className="lg:w-[250px] lg:h-[479px] justify-start py-20">
+          <div className="lg:w-[230px] lg:h-[479px] justify-start lg:py-20 lg:px-0 lg:ml-96 w-[320px] h-[350px] p-6 ">
             <div>
               <h1 className="font-josefin-sans text-[22px] leading-[25.78px] text-left pb-8">
                 Catagories
@@ -69,7 +102,7 @@ export default function Footer() {
           </div>
 
           {/* 3rd */}
-          <div className="lg:w-[250px] lg:h-[479px] justify-start py-20">
+          <div className="lg:w-[230px] lg:h-[479px] justify-start lg:py-20 lg:px-0 lg:ml-60 w-[320px] p-6 ">
             <div>
               <h1 className="font-josefin-sans text-[22px] leading-[25.78px] text-left pb-8">
               Customer Care
@@ -100,7 +133,7 @@ export default function Footer() {
           </div>
 
             {/* 4th */}
-            <div className="lg:w-[250px] lg:h-[479px] justify-start py-20">
+            <div className="lg:w-[230px] lg:h-[479px] justify-start lg:py-20 lg:px-0 lg:ml-28 w-[320px] p-6 ">
             <div>
               <h1 className="font-josefin-sans text-[22px] leading-[25.78px] text-left pb-8">
               Pages
@@ -155,8 +188,3 @@ export default function Footer() {
     </>
   );
 }
-
-
-
-
-
