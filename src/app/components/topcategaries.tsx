@@ -116,12 +116,13 @@ export default function Topcategary() {
               />
             </div>
 
-            <div className="lg:absolute lg:w-[1920px] lg:h-[462px] top-[6023px] lg:mt-0 mt-10">
+            <div className="lg:absolute w-full lg:h-[462px] top-[6023px] lg:mt-0 mt-10">
               <Image
                 src="/Rectangle 102.png"
                 alt="backIamge"
                 width={1920}
                 height={462}
+                className="w-full"
               />
 
               <div className=" lg:absolute lg:w-[574px] lg:h-[185px] top-[190px] left-[673px] gap-0 rounded-[2px] mx-2">
