@@ -17,10 +17,7 @@ export default function Footer() {
   
   :pathname === "/login"
   ?"lg:top-[1316px]"
-
-  :pathname === "/cart"
-  ?"lg:top-[1394px]"
-
+  
   :pathname === "/products"
   ?"top-[2751px]"
 
@@ -28,7 +25,7 @@ export default function Footer() {
   ?"top-[3063px]"
 
   :pathname === "/shop"
-  ?"lg:top-[2233px]"
+  ?"lg:top-[4200px]"
 
   :pathname === "/contact"
   ?"top-[1807px]"
@@ -36,8 +33,8 @@ export default function Footer() {
   :pathname === ""
   return ( 
     <>
-      <div className={`absolute lg:w-[1920px] lg:h-[532px] ${footerSet} left-[-1px]`}>
-        <div className="lg:w-[1920px] lg:h-[479px] bg-[#EEEFFB] grid lg:grid-cols-5">
+      <div className={`absolute w-full lg:h-[532px] ${footerSet} left-[-1px]`}>
+        <div className="w-full lg:h-[479px] bg-[#EEEFFB] grid lg:grid-cols-5">
           {/* 1st */}
           <div className="lg:w-[450px] lg:h-[479px] grid justify-between lg:ml-80 lg:py-0 lg:px-0 px-5 w-[320px] h-[250px]">
             <div className="lg:w-[110px] lg:h-[38px] top-[95px] left-[310px] lg:py-20 py-10">
@@ -170,7 +167,7 @@ export default function Footer() {
         </div>
 
 
-        <div className="bg-[#E7E4F8] flex justify-around items-center lg:w-[1920px] lg:h-[53px] top-[7500px] left-[-1px]">
+        <div className="bg-[#E7E4F8] flex justify-around items-center w-full lg:h-[53px] top-[7500px] left-[-1px]">
         <div className="lg:w-[220px] lg:h-[19px] top-[496px] left-[377px]">
           <p className="font-lato text-[#9DA0AE] text-[15px] font-semibold leading-[19.2px] text-left">
           ©Webecy - All Rights Reserved
