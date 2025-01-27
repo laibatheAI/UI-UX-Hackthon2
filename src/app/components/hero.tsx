@@ -1,10 +1,10 @@
-import Image from "next/image"; 
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="bg-[#F2F0FF] w-full lg:w-[1920px] h-auto lg:h-[764px] lg:pt-[122px]">
+    <div className="bg-[#F2F0FF] w-full h-auto lg:h-[764px] lg:pt-[122px] z-0">
       {/* Left Image */}
-      <div className="relative w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] lg:w-[387px] lg:h-[387px] mx-auto lg:mx-0 lg:absolute lg:top-[130px] lg:left-[70px]">
+      <div className=" w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] lg:w-[387px] lg:h-[387px] mx-auto lg:mx-0 lg:absolute lg:top-[172px] lg:left-[70px]">
         <Image
           src="/image 32.png"
           alt="Lamp Light"
@@ -26,16 +26,21 @@ export default function Hero() {
 
         {/* Black Heading */}
         <div className="font-josefin-sans text-[28px] sm:text-[40px] lg:text-[53px] leading-[36px] sm:leading-[50px] lg:leading-[81.98px] tracking-[0.015em] mb-4">
-          New Furniture Collection <br /> Trends in 2020
+          <p>
+            New Furniture Collection Trends in 2020
+          </p>
         </div>
 
         {/* Description Text */}
-        <div className="text-[#8A8FB9] font-lato text-[14px] sm:text-[16px] font-normal leading-[22px] sm:leading-[28px] mb-6 lg:mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.
+        <div className=" text-[#8A8FB9] font-lato text-[14px] sm:text-[16px] lg:w-[450px] font-normal leading-[25px] mb-6 lg:mb-8">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in
+            est adipiscing in phasellus non in justo.
+          </p>
         </div>
 
         {/* Button */}
-        <div className="flex justify-center lg:justify-start">
+        <div className="justify-center lg:flex lg:justify-start">
           <button className="bg-[#FB2E86] text-white font-josefin-sans text-[14px] sm:text-[17px] py-2 px-6 lg:px-10 rounded-sm">
             Shop Now
           </button>
@@ -43,7 +48,7 @@ export default function Hero() {
       </div>
 
       {/* Right Image */}
-      <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] lg:w-[706px] lg:h-[689px] mx-auto mt-6 lg:mt-0 lg:absolute lg:top-[161px] lg:left-[1041px]">
+      <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] lg:w-[706px] lg:h-[689px] mx-auto mt-6 lg:mt-0 lg:absolute lg:top-48 lg:left-[1041px]">
         <Image
           src="/sofa promotional header.png"
           alt="Sofa Image"
