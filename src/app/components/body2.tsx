@@ -3,7 +3,7 @@ export default function Body2(){
   return(
     <>
     <div>
-      <div className="lg:absolute grid justify-center items-center bg-[#F1F0FF] lg:w-[1920px] lg:h-[579px] top-[3081px] left-[-1px] mt-5">
+      <div className="lg:absolute grid justify-center items-center bg-[#F1F0FF] w-full lg:h-[579px] top-[3081px] left-[-1px] mt-5">
         <div className=" lg:flex lg:w-[1050px] lg:h-[550px] top-[3096px] left-[434px]">
           <div className=" lg:w-[558px] lg:h-[550px] left-[09px]">
             <Image src="/Group 153.png"
