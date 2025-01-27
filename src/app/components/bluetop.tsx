@@ -1,111 +1,60 @@
+
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Bluetop() {
   return (
-    <>
-      <div className="bg-[#7E33E0] lg:w-[1920px] lg:h-[44px]">
-        {/* right content */}
-        <div className="absolute lg:w-[16px] lg:h-[16px] top-[14px] left-[377px]">
-          <Image
-            src="/uil_envelope-alt.png"
-            alt="mailIcon"
-            width={16}
-            height={16}
-          />
+    <div className="bg-[#7E33E0] w-full lg:h-14 px-4 py-2 lg:px-16 flex flex-wrap justify-around items-center text-white text-sm">
+      {/* Left Section */}
+      <div className="flex items-center gap-5 my-1">
+        {/* Email */}
+        <div className="flex items-center gap-2">
+          <Image src="/uil_envelope-alt.png" alt="Mail Icon" width={16} height={16} />
+          <p className="font-josefin-sans font-semibold">mhhasanul@gmail.com</p>
         </div>
 
-        <div className="relative lg:w-[171px] lg:h-[16px] top-[13px] left-[403px]">
-          <p className="font-josefin-sans text-white text-base font-semibold leading-4 text-left underline-offset-auto decoration-clone">
-            mhhasanul@gmail.com
+        {/* Phone */}
+        <div className="flex items-center gap-2">
+          <Image src="/bx_bx-phone-call.png" alt="Call Icon" width={16} height={16} />
+          <p className="font-josefin-sans font-semibold">
+            <Link href="/about">(12345)67890</Link>
           </p>
-        </div>
-
-        <div className=" absolute lg:w-[16px] lgh-[16px] left-[622px] top-[14px]">
-          <Image
-            src="/bx_bx-phone-call.png"
-            alt="callIcon"
-            width={16}
-            height={16}
-          />
-        </div>
-
-        <div className="absolute lg:w-[97px] lg:h-[16px] top-[14px] left-[650px]">
-          <p className="font-josefin-sans text-white text-base font-semibold leading-4 text-left underline-offset-auto decoration-clone">
-            (12345)67890
-          </p>
-        </div>
-
-        {/* left content */}
-        <div className="absolute lg:w-[54px] lg:h-[16px] top-[14px] left-[1192px]">
-            <p className="font-josefin-sans text-white text-base font-semibold leading-4 text-left mt-1 underline-offset-auto decoration-clone">
-            English
-            </p>
-          </div>
-        <div className="absolute flex justify-between items-center lg:w-[301px] lg:h-[24px] top-[9px] left-[1247px]">
-
-          <Image
-            src="/akar-icons_chevron-down.png"
-            alt="downArrow"
-            width={16}
-            height={16}
-          />
-          {/* 1 */}
-          <div className="flex">
-            <p className="font-josefin-sans text-white text-base font-semibold leading-4 text-left mt-2 underline-offset-auto decoration-clone">
-              USD
-            </p>
-
-            <div className="mt-1.5">
-              <Image
-                src="/akar-icons_chevron-down.png"
-                alt="downArrow"
-                width={16}
-                height={16}
-              />
-            </div>
-          </div>
-
-          {/* 2 */}
-
-          <div className="flex">
-            <p className="font-josefin-sans text-white text-base font-semibold leading-4 text-left mt-2 underline-offset-auto decoration-clone">
-              Login
-            </p>
-
-            <div className="mt-1.5">
-              <Image
-                src="/carbon_user.png"
-                alt="UserIcon"
-                width={16}
-                height={16}
-              />
-            </div>
-          </div>
-
-            {/* 3 */}
-          <div className="flex">
-          <p className="font-josefin-sans text-white text-base font-semibold leading-4 text-left mt-2 underline-offset-auto decoration-clone">
-            Wishlist
-          </p>
-
-          <div className="mt-1.5">
-          <Image
-            src="/uil_heart-alt.png"
-            alt="HeartIcon"
-            width={16}
-            height={16}
-          />
-          </div>
-          </div>
-
-            {/* 4 */}
-          <Image
-            src="/fluent_cart-24-regular.png"
-            alt="CartIcon"
-            width={24}
-            height={24}
-          />
         </div>
       </div>
-    </>
+
+      {/* Right Section */}
+      <div className="flex items-center gap-6">
+        {/* Language */}
+        <div className="flex items-center gap-1">
+          <p className="font-josefin-sans font-semibold">English</p>
+          <Image src="/akar-icons_chevron-down.png" alt="Dropdown Icon" width={16} height={16} />
+        </div>
+
+        {/* Currency */}
+        <div className="flex items-center gap-1">
+          <p className="font-josefin-sans font-semibold">USD</p>
+          <Image src="/akar-icons_chevron-down.png" alt="Dropdown Icon" width={16} height={16} />
+        </div>
+
+        {/* Login */}
+        <div className="flex items-center gap-1">
+          <Link href="/login" className="font-josefin-sans font-semibold">
+            Login
+          </Link>
+          <Image src="/carbon_user.png" alt="User Icon" width={16} height={16} />
+        </div>
+
+        {/* Wishlist */}
+        <div className="flex items-center gap-1">
+          <p className="font-josefin-sans font-semibold">Wishlist</p>
+          <Image src="/uil_heart-alt.png" alt="Heart Icon" width={16} height={16} />
+        </div>
+
+        {/* Cart */}
+        <Link href="/cart" className="w-[24px] h-[24px] ">
+          <Image src="/fluent_cart-24-regular.png" alt="Cart Icon" width={24} height={24} />
+        </Link>
+      </div>
+    </div>
   );
 }
